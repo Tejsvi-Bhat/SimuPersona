@@ -102,3 +102,6 @@ public
 # Temporary folders
 tmp/
 temp/
+
+# Vercel build output
+.vercel

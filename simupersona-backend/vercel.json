@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "name": "simupersona-backend",
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "DEFAULT_AI_PROVIDER": "gemini",
+    "OPENAI_API_KEY": "",
+    "AZURE_OPENAI_ENDPOINT": "",
+    "AZURE_OPENAI_API_KEY": "", 
+    "AZURE_OPENAI_API_VERSION": "",
+    "AZURE_OPENAI_DEPLOYMENT_NAME": "",
+    "GOOGLE_API_KEY": "",
+    "GEMINI_MODEL": "gemini-1.5-flash",
+    "RATE_LIMIT_WINDOW_MS": "60000",
+    "RATE_LIMIT_MAX_REQUESTS": "1000",
+    "CORS_ORIGINS": "https://simupersona-frontend.vercel.app,http://localhost:3000"
+  }
+}
